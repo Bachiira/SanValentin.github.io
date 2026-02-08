@@ -780,4 +780,19 @@ footer{
     margin-top: 26px !important;
   }
 }
+@media (max-width: 600px){
+  body::before,
+  body::after{
+    display: none;
+  }
+
+  body{
+    background:
+      url("fotos/vaquitas.png") repeat-x top,
+      url("fotos/vaquitas.png") repeat-x bottom,
+      #f6f1f4;
+    background-size: 140px auto;
+  }
+}
+
 
