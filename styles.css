@@ -700,3 +700,84 @@ footer{
     box-shadow .15s ease,
     filter .15s ease;
 }
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablets: 2 columnas */
+@media (max-width: 900px){
+  .clothesline{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .rope-col{
+    min-height: 680px; /* baja un poco la altura base */
+  }
+
+  .flip-inner{
+    height: 300px; /* fotos un poco más bajas */
+  }
+}
+
+/* Celular: 1 columna */
+@media (max-width: 600px){
+  .wrap{
+    padding: 18px 12px 40px;
+  }
+
+  header{
+    padding: 16px 14px;
+  }
+
+  .clothesline{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .rope-col{
+    min-height: 620px;     /* importante para que el fondo no quede enorme */
+    padding-top: 10px;
+  }
+
+  /* que el fondo (si usas pattern) se vea bien en móvil */
+  .rope-col{
+    background-position: center top;
+    background-size: 220px auto; /* ajusta si quieres */
+  }
+
+  /* fotos más chicas */
+  .flip-inner{
+    height: 280px;
+  }
+
+  /* clips un poco más pequeños */
+  .clip{
+    width: 46px;
+    height: 16px;
+    top: -34px;
+  }
+
+  .string{
+    height: 18px;
+  }
+
+  /* botón volver centrado y con buen tamaño */
+  .btn-primary{
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+/* Muy pequeño (pantallas mini) */
+@media (max-width: 380px){
+  .flip-inner{
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px){
+  .hang-a, .hang-b, .hang-c, .hang-d, .hang-e, .hang-f{
+    margin-top: 26px !important;
+  }
+}
+
