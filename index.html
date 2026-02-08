@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para ti ❤️</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div class="main-container">
+<!-- CARTA -->
+<div class="letter-screen" id="letterScreen">
+  <div class="envelope" id="openLetter">
+    <div class="envelope-top"></div>
+    <div class="envelope-body"></div>
+    <div class="letter-text">
+      💌  
+      <p>Esto es para ti mi amor.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENIDO REAL -->
+<div class="wrap hidden" id="mainContent">
+  <!-- 🔽 TODO tu contenido actual va aquí 🔽 -->
+    <header>
+    <div class="badge">
+        💘 San Valentín · 14/02
+    </div>
+
+    <h1 class="header-content">Para [Valeria Chandi] ❤️</h1>
+
+    <p class="sub1">
+        Desde que entraste a mi vida, todo es más lindo y feliz.
+        Siempre te voy a agradecer el estar contigo hoy y siempre.
+    </p>
+
+    <div class="header-content pill">
+        Hecho con cariño ✨
+    </div>
+    </header>
+
+
+    <section class="grid">
+      <div class=" card hero">
+        <h2 class="header-content">Lo que amo de ti</h2>
+
+        <div class="row">
+          <span class="pill1">Tu risa</span>
+          <span class="pill1">Tu forma de cuidarme</span>
+          <span class="pill1">Cómo me miras</span>
+          <span class="pill1">Nuestros planes</span>
+          <span class="pill1">Lo que haces por mi</span>
+        </div>
+
+        <div class="list">
+          <div class="item">
+            <div class="heart">💗</div>
+            <div>
+              <strong>Un recuerdo favorito</strong>
+              <div class="muted">Estando juntitos en BuinZoo.🐧</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="heart">💗</div>
+            <div>
+              <strong>Algo que admiro de ti</strong>
+              <div class="muted">Tu forma de superarte cada dia, aunque todo este en tu contra eres muy valiente.</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="heart">💗</div>
+            <div>
+              <strong>Algo que quiero vivir contigo</strong>
+              <div class="muted">Una familia llena de amor.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btns">
+            <a href="fotitos.html" class="btn-primary">
+                💌 Tengo algo para mostrarte
+            </a>
+        </div>
+        <div class="card hidden" id="secret">
+          <p class="quote">
+            “Si existieran mil vidas, te elegiría en todas.”
+          </p>
+          <div class="signature">— [Tu nombre]</div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h2 class="header-content">Nuestro contador ⏳</h2>
+        <p class="pill">Desde que empezó lo nuestro:</p>
+        <div class="counter">
+          <div><strong id="days">0</strong> días</div>
+          <div><strong id="hours">0</strong> horas</div>
+          <div><strong id="minutes">0</strong> minutos</div>
+        </div>
+
+        <h3 class="mt">Cancioncitas para mi amor</h3>
+        <div class="list">
+            <a href="https://www.youtube.com/watch?v=qz0WjbGlmv0&list=RDqz0WjbGlmv0&start_radio=1"
+                target="_blank"
+                class="btn-youtube">
+                ▶️ Simplemente eres tu. "Ella."
+            </a>
+            <a href="https://www.youtube.com/watch?v=R5cbxTPZNL0&list=RDR5cbxTPZNL0&start_radio=1"
+                target="_blank"
+                class="btn-youtube">
+                ▶️ Estoy "Enamorado tuyo"
+            </a>
+                <a href="https://www.youtube.com/watch?v=V9gBqV1x_K0&list=RDV9gBqV1x_K0&start_radio=1"
+                target="_blank"
+                class="btn-youtube">
+                ▶️  Como todo comenzo "Lento"
+            </a>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="pill">
+      Te amo hoy, mañana y siempre ❤️
+    </footer>
+  </div>
+
+  <script>
+    // Cambia esta fecha ❤️
+    const startDate = new Date("2025-07-20T00:00:00");
+
+    function updateCounter(){
+      const now = new Date();
+      const diff = now - startDate;
+      const totalMinutes = Math.floor(diff / 60000);
+
+      const days = Math.floor(totalMinutes / (60 * 24));
+      const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+      const minutes = totalMinutes % 60;
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+    }
+
+    updateCounter();
+    setInterval(updateCounter, 1000);
+
+    document.getElementById("revealBtn").onclick = () => {
+      document.getElementById("secret").classList.toggle("hidden");
+    };
+
+    document.getElementById("confettiBtn").onclick = () => {
+      for(let i=0;i<60;i++){
+        const e = document.createElement("span");
+        e.textContent = Math.random() > 0.5 ? "💖" : "✨";
+        e.className = "confetti";
+        e.style.left = Math.random()*100 + "vw";
+        document.body.appendChild(e);
+        setTimeout(() => e.remove(), 2000);
+      }
+    };
+  </script>
+  <script>
+  const letter = document.getElementById("openLetter");
+  const screen = document.getElementById("letterScreen");
+  const content = document.getElementById("mainContent");
+
+  letter.addEventListener("click", () => {
+    letter.classList.add("open");
+
+    setTimeout(() => {
+      screen.style.opacity = "0";
+      screen.style.transition = "opacity 1s ease";
+    }, 600);
+
+    setTimeout(() => {
+      screen.style.display = "none";
+      content.classList.remove("hidden");
+    }, 1600);
+  });
+</script>
+</div>
+  </div> <!-- cierre wrap -->
+
+</body>
+</html>

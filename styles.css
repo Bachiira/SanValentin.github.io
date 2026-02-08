@@ -1,0 +1,702 @@
+:root{
+  --card: radial-gradient(
+      circle,
+      #fdc1d0 0%,
+      #eb758b 40%,
+      #c972d1 70%,
+      #9874d1 100%
+    );
+  --border: rgba(0, 250, 62, 0.18);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgb(236, 253, 0);
+  --muted1: rgb(235, 231, 19);
+  --accent:#ff5d8f;  
+}
+
+*{
+  box-sizing:border-box;
+}
+
+.header-content h1{
+  text-align: center;
+}
+.header-content h1{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+body{
+  margin:0;
+  font-family: system-ui, sans-serif;
+  color:white;
+  min-height:100vh;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.55)
+    ),
+    url("fotos/vaquitas.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 18px 60px;
+}
+
+@media (min-width: 900px){
+  body{
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+}
+
+.header-content{
+  text-align: center;
+}
+
+header{
+  padding: 28px 26px;
+  border-radius: 22px;
+
+  background: radial-gradient(
+    circle,
+      #fdc1d0 0%,
+      #eb758b 40%,
+      #c972d1 70%,
+      #9874d1 100%
+  );
+
+  box-shadow: 0 18px 45px rgba(0,0,0,.35);
+}
+
+header h1{
+  color:white;
+  font-size:32px;
+  margin:12px 0;
+}
+
+header p{
+  color:rgba(255,255,255,.9);
+  line-height:1.6;
+}
+
+header .badge{
+  display:inline-block;
+  margin-bottom:8px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.35);
+  color:white;
+  font-size:13px;
+}
+
+
+
+@media (max-width: 600px){
+  header{
+    padding: 60px 30px;
+    background-size: contain;
+  }
+}
+
+
+
+.btn-youtube{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 18px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+  color:white;
+  background:#ff0000;
+  box-shadow:0 10px 30px rgba(255,0,0,.4);
+  transition:transform .1s ease, box-shadow .2s ease;
+}
+
+.btn-youtube:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 40px rgba(255,0,0,.6);
+}
+
+
+.badge{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(144, 153, 143, 0.05);
+  font-size:14px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  background:var(--accent);
+  border-radius:50%;
+}
+
+.sub{
+  color:var(--muted);
+  text-align: center;
+}
+
+.sub1{
+  color:var(--muted1);
+  text-align: center;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:18px;
+  margin-top:18px;
+}
+
+@media(max-width:880px){
+  .grid{ grid-template-columns:1fr; }
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:18px;
+}
+
+.hero{
+  display:grid;
+  gap:14px;
+}
+
+.row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.pill{
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:#9b69f833;
+  font-size:14px;
+}
+
+.pill1{
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background-color: #9796cf;
+  font-size:14px;
+}
+
+.list{
+  display:grid;
+  gap:10px;
+}
+
+.item{
+  display:flex;
+  gap:10px;
+  padding:12px;
+  border-radius:14px;
+  background:rgba(0,0,0,.15);
+}
+
+.heart{
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+.muted{
+  color:var(--muted);
+}
+
+.btns{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+button{
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.08);
+  color:var(--text);
+  cursor:pointer;
+}
+
+button:hover{
+  background:rgba(255,255,255,.15);
+}
+
+.primary{
+  background:linear-gradient(135deg, #ff4d6d, #ff758f);
+}
+
+.hidden{
+  display:none;
+}
+
+.counter{
+  display:grid;
+  gap:6px;
+  margin-top:10px;
+  padding:12px;
+  border:1px dashed var(--border);
+  border-radius:14px;
+  background-color: #df72f5;
+}
+
+.mt{
+  margin-top:16px;
+}
+
+footer{
+  margin-top:24px;
+  text-align:center;
+  color:var(--muted);
+}
+
+.confetti{
+  position:fixed;
+  top:-10px;
+  animation:fall 2s linear forwards;
+  font-size:18px;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+/* PANTALLA INICIAL */
+.letter-screen{
+  position:fixed;
+  inset:0;
+  background: url(fotos/corazon.jpg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+/* SOBRE */
+.envelope{
+  width:420px;     /* ⬅️ ancho grande */
+  height:280px;    /* ⬅️ alto grande */
+  position:relative;
+  cursor:pointer;
+  animation:float 2.5s ease-in-out infinite;
+}
+
+
+/* CUERPO */
+.envelope-body{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, #ffffff, #f6f6f6);
+  border-radius:18px;
+  box-shadow:0 30px 60px rgba(0,0,0,.45);
+}
+
+.envelope-top{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:55%;
+  background:linear-gradient(135deg, #f8f8f8, #eaeaea);
+  clip-path:polygon(0 0, 100% 0, 50% 100%);
+  transform-origin:top;
+  transition:transform 1.1s ease;
+  z-index:2;
+}
+
+
+/* TEXTO */
+.letter-text{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  color:#ff4d6d;
+  font-weight:600;
+  z-index:1;
+}
+
+/* EFECTO APERTURA */
+.envelope.open .envelope-top{
+  transform:rotateX(180deg);
+}
+
+/* OCULTAR */
+.hidden{
+  display:none;
+}
+
+/* ANIMACIONES */
+@keyframes float{
+  0%,100%{ transform:translateY(0) scale(1); }
+  50%{ transform:translateY(-14px) scale(1.02); }
+}
+
+.btn-link{
+  display:inline-block;
+  text-decoration:none;
+  color:rgb(10, 5, 5);
+  text-align:center;
+}
+
+/* ====== LAYOUT 3 CUERDAS ====== */
+.clothesline{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap:44px;
+  margin-top:26px;
+  align-items:start;
+}
+
+@media (max-width: 900px){
+  .clothesline{ grid-template-columns: 1fr; }
+}
+
+/* ====== COLUMNA ====== */
+.rope-col1{
+  position:relative;
+  min-height:760px;
+  padding-top:90px;
+  background:
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.55)
+    ),
+    url("fotos/pingu.jpg");
+  
+}
+.rope-col2{
+  position:relative;
+  min-height:760px;
+  padding-top:30px;
+  background:
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.55)
+    ),
+    url("fotos/pingu.jpg");
+  
+}
+.rope-col3{
+  position:relative;
+  min-height:760px;
+  padding-top:30px;
+  background:
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.55)
+    ),
+    url("fotos/pingu.jpg");
+  
+}
+
+/* ====== CUERDA ONDULADA (se nota MUCHO más) ====== */
+/* ====== CUERDA MÁS CURVA + MOVIMIENTO ====== */
+.rope{
+  background: #2500f8;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:70px;
+  height:100%;
+  z-index:0;
+  opacity:.95;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.3),
+    0 6px 18px rgba(0,0,0,.35);
+
+  /* color base de cuerda */
+  background:rgb(238, 234, 4);
+  border-radius:999px;
+
+  /* forma ondulada tipo "S" */
+  clip-path: polygon(
+    45% 0%,
+    60% 6%,
+    40% 12%,
+    62% 18%,
+    38% 24%,
+    64% 30%,
+    36% 36%,
+    66% 42%,
+    34% 48%,
+    68% 54%,
+    32% 60%,
+    70% 66%,
+    30% 72%,
+    72% 78%,
+    28% 84%,
+    74% 90%,
+    26% 96%,
+    45% 100%,
+    55% 100%,
+    35% 96%,
+    58% 90%,
+    36% 84%,
+    60% 78%,
+    38% 72%,
+    62% 66%,
+    40% 60%,
+    64% 54%,
+    42% 48%,
+    66% 42%,
+    44% 36%,
+    68% 30%,
+    46% 24%,
+    70% 18%,
+    48% 12%,
+    72% 6%,
+    55% 0%
+  );
+
+  animation: ropeWave 4.5s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* brillo/sombra para que parezca cuerda real */
+.rope::before{
+  background: linear-gradient(
+    90deg,
+    #5c3621,
+    #a06a45,
+    #5c3621
+  );
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:999px;
+  opacity:.55;
+}
+
+/* “nudos” (puntitos) */
+.rope::after{
+  background:
+    radial-gradient(circle, #d9b08c 0 2px, transparent 3px)
+    0 40px / 100% 120px repeat-y;
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+  width:8px;
+  height:100%;
+  background:
+    radial-gradient(circle, rgba(255,255,255,.65) 0 2px, transparent 3px) 0 40px / 100% 120px repeat-y;
+  opacity:.7;
+}
+
+@keyframes ropeWave{
+  0%,100%{
+    transform:translateX(-50%) rotate(-1.2deg);
+  }
+  50%{
+    transform:translateX(-50%) rotate(1.2deg);
+  }
+}
+
+
+/* ====== COLGADOS ====== */
+.hang{
+  position:relative;
+  z-index:2;
+  width:min(280px, 92%);
+  margin:0 auto;
+  transform-origin: top center;
+}
+
+/* “hilito” que conecta a la cuerda */
+.string{
+  position:absolute;
+  top:-22px;
+  left:50%;
+  transform:translateX(-50%);
+  width:2px;
+  height:22px;
+  background:rgba(255,255,255,.55);
+  border-radius:999px;
+}
+
+/* pinza */
+.clip{
+  position:absolute;
+  top:-40px;
+  left:50%;
+  transform:translateX(-50%);
+  width:56px;
+  height:20px;
+  border-radius:999px;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 12px 26px rgba(0,0,0,.32);
+}
+
+.clip::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:7px;
+  transform:translateX(-50%);
+  width:32px;
+  height:8px;
+  border-radius:999px;
+  background:rgba(0,0,0,.14);
+}
+
+/* ====== FLIP ====== */
+.flip-card{ perspective:1000px; }
+.flip-inner{
+  position:relative;
+  width:100%;
+  height:320px;
+  transition:transform 0.8s;
+  transform-style:preserve-3d;
+  border-radius:18px;
+  cursor:pointer;
+}
+
+.flip-card.is-flipped .flip-inner{ transform:rotateY(180deg); }
+
+.flip-front, .flip-back{
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  backface-visibility:hidden;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.18);
+}
+
+.flip-front img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.flip-back{
+  background:linear-gradient(135deg, #ff4d6d, #ff758f);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  text-align:center;
+  font-size:18px;
+  transform:rotateY(180deg);
+}
+
+/* ====== EFECTO COLGANDO (rotaciones distintas) ====== */
+.hang-a{ margin-top:40px;  --r:-2deg; }
+.hang-b{ margin-top:140px; --r: 2deg; }
+
+.hang-c{ margin-top:20px;  --r: 2deg; }
+.hang-d{ margin-top:170px; --r:-2deg; }
+
+.hang-e{ margin-top:70px;  --r:-2deg; }
+.hang-f{ margin-top:190px; --r: 2deg; }
+
+
+/* balanceo suave */
+.hang{ animation:swing 4.5s ease-in-out infinite; }
+.hang:nth-child(3n){ animation-delay:.25s; }
+.hang:nth-child(4n){ animation-delay:.5s; }
+
+@keyframes swing{
+  0%,100%{ transform:rotate(var(--r,0deg)); }
+  50%{ transform:rotate(calc(var(--r,0deg) * -1)); }
+}
+
+.hang{
+  animation: swing2 3.8s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* diferencias para que no se muevan igual */
+.hang-a{ --r:-3deg; animation-delay:.1s; }
+.hang-b{ --r: 3deg; animation-delay:.7s; }
+.hang-c{ --r: 2deg; animation-delay:.2s; }
+.hang-d{ --r:-2deg; animation-delay:.9s; }
+.hang-e{ --r:-3deg; animation-delay:.35s; }
+.hang-f{ --r: 3deg; animation-delay:1.1s; }
+
+@keyframes swing2{
+  0%,100%{ transform:rotate(var(--r,0deg)); }
+  50%{ transform:rotate(calc(var(--r,0deg) * -1)); }
+}
+
+.string{
+  animation: stringWiggle 3.8s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes stringWiggle{
+  0%,100%{ transform:translateX(-50%) rotate(-2deg); }
+  50%{ transform:translateX(-50%) rotate(2deg); }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 120px auto;
+  }
+}
+
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  padding:12px 22px;
+  border-radius:16px;
+
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:.3px;
+
+  color:white;
+  text-decoration:none;
+
+  background: linear-gradient(
+    135deg,
+    #ff4d6d,
+    #ff758f
+  );
+
+  border:none;
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 20px rgba(255,77,109,.45),
+    inset 0 -2px 0 rgba(0,0,0,.15);
+
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease,
+    filter .15s ease;
+}

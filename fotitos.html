@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fotitos nuestras 💖</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="header-content">Nuestros recuerdos 📸</h1>
+      <p class="sub">Toca cada foto… se giran y atrás hay notitas 💕</p>
+    </header>
+
+    <section class="clothesline">
+      <!-- ===================== CUERDA 1 (IZQUIERDA) ===================== -->
+      <div class="rope-col1 rope-1">
+        <div class="rope"></div>
+
+        <!-- Foto A -->
+        <div class="hang hang-a">
+          <div class="clip"></div>
+          <div class="string"></div>
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="fotos/mor1.jpg" alt="Foto 1">
+              </div>
+              <div class="flip-back">
+                <p>💗Contigo todo es mas lindo. Esta fue de nuestras primeras fotitos en la cual no sabia que iba a representar tanto a dia de hoy. Es el principio de una historia muy linda para mi. 💗</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto B -->
+        <div class="hang hang-b">
+          <div class="clip"></div>
+          <div class="string"></div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="fotos/mor2.jpg" alt="Foto 2">
+              </div>
+              <div class="flip-back">
+                <p>✨Cada salida que tenemos es una aventura que amo vivir. Haces que cualquier lugar donde estes sea mas brillante y lindo✨</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== CUERDA 2 (CENTRO) ===================== -->
+      <div class="rope-col2 rope-2">
+        <div class="rope"></div>
+        <div class="rope-label"></div>
+
+        <!-- Foto C -->
+        <div class="hang hang-c">
+          <div class="clip"></div>
+          <div class="string"></div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="fotos/mor3.jpg" alt="Foto 3">
+              </div>
+              <div class="flip-back">
+                <p>🥺Esta fotito me encanta de ti, no necestas demostrar mas que tu belleza, me hace recordad lo mucho que te amo🥺</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto D -->
+        <div class="hang hang-d">
+          <div class="clip"></div>
+          <div class="string"></div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="fotos/mor4.jpg" alt="Foto 4">
+              </div>
+              <div class="flip-back">
+                <p>💞Mi Medico Veterinaria unica y hermosa, te forma de cuidar a los animalitos me encanta, eres lo que sueñas y eso es hermoso mi amor, me inspiras como no te imaginas.💞</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== CUERDA 3 (DERECHA) ===================== -->
+      <div class="rope-col3 rope-3">
+        <div class="rope"></div>
+        <div class="rope-label"></div>
+
+        <!-- Foto E -->
+        <div class="hang hang-e">
+          <div class="clip"></div>
+          <div class="string"></div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="fotos/mor5.jpg" alt="Foto 5">
+              </div>
+              <div class="flip-back">
+                <p>❤️Momento exacto donde me hiciste llorar de felicidad, eso solo lo podrias lograr tu y nadie mas, por eso mi amor por ti es tan grande que no lo puedes entender(Y este amor viene desde el comienzo, no solo de ahora).❤️</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foto F -->
+        <div class="hang hang-f">
+          <div class="clip"></div>
+          <div class="string"></div>
+
+          <div class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="fotos/mor6.jpg" alt="Foto 6">
+              </div>
+              <div class="flip-back">
+                <p>🐧Esa hermosa sonrisa que tienes es lo que siempre voy a buscar proteger. Aunque estes triste luchare con todas mis fuerzas por recuperar esa hermosa sonrisa que me enamora todos los dias.🐧</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer style="margin-top:22px; text-align:center;">
+      <a href="index.html" class="btn-primary">⬅️ Volver</a>
+    </footer>
+  </div>
+
+  <script>
+    // Flip por click (ideal en celular)
+    document.querySelectorAll(".flip-card").forEach(card => {
+      card.addEventListener("click", () => {
+        card.classList.toggle("is-flipped");
+      });
+    });
+  </script>
+</body>
+</html>
