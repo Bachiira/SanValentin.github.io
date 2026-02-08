@@ -781,14 +781,12 @@ footer{
   }
 }
 /* ===================== FONDO MOBILE ===================== */
-@media (max-width: 600px){
-
+@media (max-width: 600px)
   /* quitamos las vacas laterales */
   body::before,
   body::after{
     display: none;
   }
-
   /* fondo de corazones */
   body{
     background-image: url("fotos/intento1.jpg");
@@ -798,6 +796,7 @@ footer{
     background-color: #fff;         /* respaldo */
   }
 }
+
 
 
 
