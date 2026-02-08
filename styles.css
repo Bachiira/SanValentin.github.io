@@ -781,18 +781,18 @@ footer{
   }
 }
 @media (max-width: 600px){
+  /* quitar vacas laterales */
   body::before,
   body::after{
     display: none;
   }
 
+  /* fondo limpio para móvil */
   body{
-    background:
-      url("fotos/vaquitas.png") repeat-x top,
-      url("fotos/vaquitas.png") repeat-x bottom,
-      #f6f1f4;
-    background-size: 140px auto;
+    background: #f6f1f4; /* rosado/gris suave */
   }
 }
+
+
 
 
