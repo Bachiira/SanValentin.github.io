@@ -786,12 +786,12 @@ footer{
   body::after{
     display: none;
   }
-
   /* fondo limpio para móvil */
   body{
     background: #f6f1f4; /* rosado/gris suave */
   }
 }
+
 
 
 
