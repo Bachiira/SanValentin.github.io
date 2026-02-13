@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to top, #ffe6f0, #fff);
+    height: 100vh;
+}
+
+.flowers {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* FLORES */
+
+.flor {
+    position: absolute;
+    top: -10vh;
+    animation: caer linear forwards;
+    opacity: 0.9;
+}
+
+/* ANIMACIÓN REALISTA */
+
+@keyframes caer {
+
+    0% {
+        transform: translateX(0) translateY(-10vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform:
+        translateX(calc(var(--drift) * 0.5))
+        translateY(50vh)
+        rotate(180deg);
+    }
+
+    100% {
+        transform:
+        translateX(var(--drift))
+        translateY(110vh)
+        rotate(360deg);
+        opacity: 0.8;
+    }
+}

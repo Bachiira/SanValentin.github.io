@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Lluvia de Flores</title>
+<link rel="stylesheet" href="uwu.css">
+</head>
+<body>
+
+<div class="flowers"></div>
+
+<script>
+
+function crearFlor() {
+
+    const flor = document.createElement("div");
+    flor.classList.add("flor");
+
+    // Posición horizontal inicial
+    flor.style.left = Math.random() * 100 + "vw";
+
+    // Tamaño (profundidad)
+    const size = 20 + Math.random() * 50;
+    flor.style.fontSize = size + "px";
+
+    // Velocidad
+    const duracion = 3 + Math.random() * 4;
+    flor.style.animationDuration = duracion + "s";
+
+    // Dirección del viento
+    const drift = (Math.random() - 0.5) * 200;
+    flor.style.setProperty('--drift', drift + "px");
+
+    // Profundidad (blur)
+    const blur = Math.random() * 2;
+    flor.style.filter = `blur(${blur}px)`;
+
+    // Rotación inicial
+    flor.style.transform = `rotate(${Math.random()*360}deg)`;
+
+    // Tipo de flor
+    flor.innerHTML = ["🌸","🌹","🌺","💮","🌷","🌼"][Math.floor(Math.random()*6)];
+
+    document.querySelector(".flowers").appendChild(flor);
+
+    setTimeout(() => {
+        flor.remove();
+    }, duracion * 1000);
+}
+
+// Flujo constante
+setInterval(crearFlor, 80);
+
+</script>
+
+</body>
+</html>
