@@ -49,3 +49,38 @@ body {
         opacity: 0.8;
     }
 }
+
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  padding:12px 22px;
+  border-radius:16px;
+
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:.3px;
+
+  color:white;
+  text-decoration:none;
+
+  background: linear-gradient(
+    135deg,
+    #ff4d6d,
+    #ff758f
+  );
+
+  border:none;
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 20px rgba(255,77,109,.45),
+    inset 0 -2px 0 rgba(0,0,0,.15);
+
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease,
+    filter .15s ease;
+}
